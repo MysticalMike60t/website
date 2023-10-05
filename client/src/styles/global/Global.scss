@@ -1,0 +1,45 @@
+@import "./vars";
+@import "./funcs";
+
+// Include utility mixins
+@include padding-utils;
+@include margin-utils;
+
+// Apply styles to all elements
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+// Apply global styles to specific elements
+body {
+    font-family: $font-family;
+    @include remove-default-margin-padding;
+    overflow: hidden;
+}
+
+// Define text selection color
+::selection {
+    background-color: $primary-color;
+    color: white;
+}
+
+// Optionally, define more global styles for other elements such as links, headings, etc.
+a {
+    text-decoration: none;
+    color: $primary-color;
+
+    &:hover {
+        color: $secondary-color;
+    }
+}
+
+h1,
+h2,
+h3 {
+    font-weight: bold;
+    /* Add other heading styles as needed */
+}
+
+@import "../pages/pages.scss";

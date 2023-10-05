@@ -1,0 +1,27 @@
+@mixin remove-default-margin-padding {
+  margin: 0;
+  padding: 0;
+}
+@mixin remove-overflow {
+  overflow: hidden;
+}
+
+@mixin margin-utils {
+  @each $dir in (top, right, bottom, left) {
+    @each $size in (0, 1, 2, 3, 4, 5) {
+      .m-#{$dir}-#{$size} {
+        margin-#{$dir}: $size * $spacing-unit !important;
+      }
+    }
+  }
+}
+
+@mixin padding-utils {
+  @each $dir in (top, right, bottom, left) {
+    @each $size in (0, 1, 2, 3, 4, 5) {
+      .p-#{$dir}-#{$size} {
+        padding-#{$dir}: $size * $spacing-unit !important;
+      }
+    }
+  }
+}

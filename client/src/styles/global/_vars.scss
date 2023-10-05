@@ -1,0 +1,61 @@
+// Colors
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$success-color: #28a745;
+$danger-color: #dc3545;
+$info-color: #17a2b8;
+$warning-color: #ffc107;
+
+// Fonts
+$font-family: 'Helvetica Neue', sans-serif;
+$font-size-base: 16px;
+$line-height-base: 1.5;
+
+// Spacing
+$spacing-unit: 1rem;
+
+// Breakpoints
+$breakpoint-xs: 0;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+// Container sizes
+$container-sm: 540px;
+$container-md: 720px;
+$container-lg: 960px;
+$container-xl: 1140px;
+
+// Border radius
+$border-radius: 0.25rem;
+
+// Z-index values
+$z-index-modal: 1050;
+$z-index-navbar: 1030;
+
+// Box shadows
+$box-shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+$box-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+$box-shadow-lg: 0 8px 12px rgba(0, 0, 0, 0.1);
+
+// Transitions
+$transition-duration: 0.3s;
+$transition-easing: ease-in-out;
+
+// You can add more variables as needed for your project's specific styles.
+
+// Responsive classes (optional)
+$responsive-classes: (
+  'sm': $breakpoint-sm,
+  'md': $breakpoint-md,
+  'lg': $breakpoint-lg,
+  'xl': $breakpoint-xl
+);
+
+// Generate responsive utility classes
+@each $breakpoint, $value in $responsive-classes {
+  .text-#{$breakpoint} {
+    font-size: $value;
+  }
+}
